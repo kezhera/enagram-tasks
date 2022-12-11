@@ -1,0 +1,147 @@
+.sidebarWrapper{
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-left: 0.75rem;
+    width: 11.125rem;
+    background: #2D62ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mainNavigation{
+    margin-top: 7.8125rem;
+}
+
+.navigationWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigationLink{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4375rem 0 0.4375rem 1rem;
+}
+
+.navigationLink svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navigationLink path{
+    fill: #fff;
+}
+
+.navigationActiveLink{
+    position: relative;
+    color: #2D62ED;
+    background: #F8F8F8;
+    border-radius: 30px 0px 0px 30px;
+    padding: 0.3125rem 0 0.3125rem 1rem;
+}
+
+.navigationActiveLinkVisual{
+    position: absolute;
+    right: 0;
+    width: 14px;
+    height: 10px;
+    background: #F8F8F8;
+}
+
+.topVisual{
+    top: 0;
+    translate: 0 -100%;
+}
+
+.topVisual::before{
+    border-bottom-right-radius: 10px;
+}
+
+.bottomVisual{
+    bottom: 0; 
+    translate: 0 100%;
+}
+
+.bottomVisual::before{
+    border-top-right-radius: 10px;
+}
+
+.navigationActiveLinkVisual::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #F8F8F8;
+    background: #2D62ED;
+    z-index: 1;
+}
+
+.navigationActiveLink svg{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.navigationActiveLink path{
+    fill: #2D62ED;
+}
+
+.sidebarFooter{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.sidebarNavigation{
+    position: relative;
+    gap: 0.25rem;
+    padding: 2.5rem 0;
+}
+
+.sidebarNavigation::after, .sidebarNavigation::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 8.75rem;
+    height: 2px;
+    background-color: #9EB9FF;
+}
+
+.sidebarNavigation::after{
+    top: 0;
+}
+
+.sidebarNavigation::before{
+    bottom: 0;
+}
+
+.toggleThemeMode{
+    border: 0.702703px solid #DBE9FD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 3.25rem;
+    height: 1.5rem;
+    margin: 3.75rem auto 3.125rem;
+    border-radius: 1rem;
+    transform: translateX(-0.75rem);
+}
+
+.dayMode{
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.darkMode{
+    width: 0.875rem;
+    height: 1rem;
+}

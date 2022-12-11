@@ -1,0 +1,49 @@
+.headerWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.375rem 2.25rem;
+    border-bottom: 1px solid #E3E3E3;
+    z-index: 1;
+}
+
+.headerButton{
+    padding: 0.5rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+.headerButtonGroup{
+    display: flex;
+    gap: 1rem;
+    margin-right: 5rem;
+}
+
+.cromeButton{
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: #4B4B4B;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    border-radius: 8px;
+}
+
+.upgradeProButton{
+    background: #2D62ED;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: #FFFFFF;
+}

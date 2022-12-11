@@ -1,0 +1,12 @@
+export { default as Check } from "./Check";
+export { default as ContactSupport } from "./ContactSupport";
+export { default as Copy } from "./Copy";
+export { default as Delete } from "./Delete";
+export { default as Dropdown } from "./Dropdown";
+export { default as Facebook } from "./Facebook";
+export { default as IconAwesomeMoon } from "./IconAwesomeMoon";
+export { default as IconFeatherSun } from "./IconFeatherSun";
+export { default as Settings } from "./Settings";
+export { default as SpeechToText } from "./SpeechToText";
+export { default as Spellchecker } from "./Spellchecker";
+export { default as TextToSpeech } from "./TextToSpeech";

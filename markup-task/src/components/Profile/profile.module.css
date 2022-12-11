@@ -1,0 +1,23 @@
+.profileWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.profileImg{
+    width: 2.25rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.iconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+}
+
+.iconWrapper svg{
+    width: 0.55rem;
+}
