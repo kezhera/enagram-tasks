@@ -5,12 +5,16 @@ export default class SynthetizeText {
     }
 
     async start(){
-        const sentences = this.createSentesesFromText(this.text)
+        const sentences = this.createSentesesFromText(this.text.trim())
+        const promises = []
 
-        sentences.forEach( async (sentece) => {
-            const sourceUrl = await this.SynthetizeTextDAL(sentece)
-            this.onResult(sourceUrl)
+        sentences.forEach((sentece) => {
+            promises.push(this.SynthetizeTextDAL(sentece))
         })
+
+        for await (const res of promises){
+            this.onResult(res)
+        }
     }
 
     createSentesesFromText(text){
@@ -46,14 +50,14 @@ export default class SynthetizeText {
 
     async SynthetizeTextDAL(sentence){
         try{
-            var model = {
+            const model = {
                 Language: 'ka',
                 Speed: 100,
                 Text: sentence,
                 Voice: 0,
                 IterationCount: 2
             };
-    
+
             const response = await fetch('https://enagramm.com/Tools/SythesizeTextDAL', {
                 method: 'POST', 
                 headers: {
@@ -62,7 +66,7 @@ export default class SynthetizeText {
                 body: JSON.stringify(model)
             }).then( res => res.json());
 
-            const sourceUrl = response.AudioFilePath;
+            const sourceUrl = await response.AudioFilePath;
             return sourceUrl;
         }catch(error) {
             console.error(error)
