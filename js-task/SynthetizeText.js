@@ -4,18 +4,12 @@ export default class SynthetizeText {
         this.onResult = onResult
     }
 
-    start(){
+    async start(){
         const sentences = this.createSentesesFromText(this.text)
-        const promises = []
 
-        sentences.forEach( (sentece, index) => {
-            promises.push(this.SynthetizeTextDAL(sentece))
-        })
-
-        Promise.all(promises).then( results => {
-            results.forEach( result => {
-                this.onResult(result)
-            })
+        sentences.forEach( async (sentece) => {
+            const sourceUrl = await this.SynthetizeTextDAL(sentece)
+            this.onResult(sourceUrl)
         })
     }
 
