@@ -25,7 +25,7 @@ export default class SynthetizeText {
             const sybmolsForTextSlice = [".", "!", "?", ";", ",", " "]
             for(const symbol of sybmolsForTextSlice){
                 const symbolIndexInText = text.indexOf(symbol, MIN_SYMBOLS_IN_STR)
-                if(symbolIndexInText < MAX_SYMBOLS_IN_STR){
+                if(symbolIndexInText > 0 && symbolIndexInText < MAX_SYMBOLS_IN_STR){
                     return symbolIndexInText
                 }
             }
